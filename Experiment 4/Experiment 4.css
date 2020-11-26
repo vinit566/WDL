@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.container {
+  height: 97vh ;
+  background-image: url(https://ltce.in/img_ltce/slide/slide4.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 1px;
+  width: 100%;
+  height: 60px;
+  background: rgba(231, 112, 32, 0.625);
+  display: -webkit-box;
+  display: flex;
+    -webkit-box-orient:horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack:center;
+          justify-content:center ;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.modal-container {
+  display: -webkit-box;
+  display: flex;
+  max-width: 1000px;
+  max-height: 1000px;
+  overflow: auto;
+  border-radius: 10px;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  background: rgba(233, 229, 229, 0.891);
+  -webkit-transform: translateY(100px) scale(0.4);
+          transform: translateY(100px) scale(0.4);
+}
+.modal-title {
+  font-size: 26px;
+  margin: 0px;
+  font-weight: 400;
+  color: #6220c4;
+}
+.modal-desc {
+  margin: 3px 0 3px 0;
+}
+.modal-left {
+  padding: 20px 20px ;
+  background: rgb(255, 255, 255);
+  -webkit-box-flex: 1.5;
+          flex: 1.5;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
+  opacity: 0;
+}
+.modal-button {
+  color: #f56416;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  padding: 20px 20px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.16);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.modal-button:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.8);
+}
+.modal-right {
+  -webkit-box-flex: 2;
+          flex: 2;
+  font-size: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  overflow: hidden;
+}
+.modal-right img {
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition-duration: 1.2s;
+          transition-duration: 1.2s;
+}
+.modal.is-open {
+  height: 110%;
+  background: rgba(51, 51, 51, 0.85);
+}
+.modal.is-open .modal-button {
+  opacity: 0;
+}
+.modal.is-open .modal-container {
+  opacity: 1;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  pointer-events: auto;
+  -webkit-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
+}
+.modal.is-open .modal-right img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.modal.is-open .modal-left {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+.modal-buttons {
+  display: -webkit-box;
+  display: relative;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+}
+.modal-buttons a {
+  color: rgba(51, 51, 51, 0.6);
+  font-size: 14px;
+}
+
+.sign-up {
+  margin: 60px 0 0;
+  font-size: 14px;
+  text-align: center;
+}
+.sign-up a {
+  color: #8c7569;
+}
+
+.input-button {
+  padding: 10px 50px;
+  outline: none;
+  border: 0;
+  color: #fff;
+  border-radius: 6px;
+  background: #ee670c;
+  font-family: "Nunito", sans-serif;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.input-button:hover {
+  background: #914f29;
+}
+
+.input-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  color: #8c7569;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.input-block {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  padding: 10px 10px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.input-block input {
+  outline: 0;
+  border: 0;
+  padding: 4px 0 0;
+  font-size: 14px;
+  font-family: "Nunito", sans-serif;
+}
+.input-block input::-webkit-input-placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+.input-block input::-moz-placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+.input-block input:-ms-input-placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+.input-block input::-ms-input-placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+.input-block input::placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+.input-block:focus-within {
+  border-color: #ce713f;
+}
+.input-block:focus-within .input-label {
+  color: rgba(224, 99, 32, 0.8);
+}
+
+.icon-button {
+  outline: 0;
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  background: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  .modal-container {
+    width: 90%;
+  }
+
+  .modal-right {
+    display: none;
+  }
+}
